@@ -1,0 +1,36 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1  class="h3 mb-0 text-gray-800">User Create</h1>
+    </div>
+    
+    <div class="container">
+        <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div class="row form-group">
+        <div class="col-lg-6">
+            <label for="">User Id</label>
+            <input type="number" class="form-control" name="userid" formControlName="userid" [ngClass]="{'form-error':userForm.get('username').dirty && userForm.get('username').invalid}" >
+           
+          
+        </div>
+        <div class="col-lg-6">
+            <label for="">User Name</label>
+            <input type="text" class="form-control" formControlName="username" [ngClass]="{'form-error':userForm.get('username').dirty && userForm.get('username').invalid}">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Age</label>
+            <input type="number" class="form-control" formControlName="age" [ngClass]="{'form-error':userForm.get('username').dirty && userForm.get('username').invalid}">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Phone number</label>
+            <input type="text" class="form-control" formControlName="phonenumber" [ngClass]="{'form-error':userForm.get('username').dirty && userForm.get('username').invalid}">
+              
+        </div>
+        </div>
+        <div class="row form-group">
+        <div class="col-lg-6">
+            <input type="submit" [disabled]="!userForm.valid" class="btn btn-primary" value="Submit">
+         
+        </div>
+    </div>
+    </form>
+    
+

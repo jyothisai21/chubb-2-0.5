@@ -1,0 +1,21 @@
+.primary{
+    background-color:blue;
+   
+}
+.warning{
+    background-color: yellow;
+    
+    
+}
+.success{
+    background-color: green;
+
+}
+.danger{
+    background-color: red;
+}
+.card{
+    border: 5px solid rgb(80, 95, 136);
+    color: white;
+    
+}

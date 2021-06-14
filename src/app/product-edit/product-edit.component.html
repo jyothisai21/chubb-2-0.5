@@ -1,0 +1,35 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1  class="h3 mb-0 text-gray-800">Product -{{currentId}}</h1>
+    </div>
+    
+    <div class="container">
+        <form [formGroup]="productForm" (ngSubmit)= "updateForm()" >
+        <div class="row form-group">
+        <div class="col-lg-6">
+            <label for="">Product Name</label>
+            <input type="text" class="form-control" formControlName="productname">
+            </div>
+        <div class="col-lg-6">
+            <label for="">Price</label>
+            <input type="number" class="form-control" formControlName="productprice">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Discount</label>
+            <input type="number" class="form-control" formControlName="discount">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Type</label>
+            <select class="form-control" formControlName="producttype">
+                <option value="el">Electronic</option>
+                <option value="ga">Gadget</option>
+                </select>
+        </div>
+        </div>
+        <div class="row form-group">
+        <div class="col-lg-6">
+            <input type="submit" [disabled]="!productForm.valid" class="btn btn-primary" value="Update">
+         
+        </div>
+    </div>
+    </form>
+    
